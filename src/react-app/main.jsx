@@ -1,4 +1,6 @@
 import React from "react";
+import { SessionProvider } from "@lib/providers/SessionProvider.jsx";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,5 +21,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <SessionProvider>
+      <RouterProvider router={router} />
+    </SessionProvider>
+  );
 }

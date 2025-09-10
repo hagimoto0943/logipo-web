@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card.jsx";
-import { Button } from "../../components/ui/button.jsx";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@components/ui/card.jsx";
+import { Button } from "@components/ui/button.jsx";
 
 export default function Dashboard() {
   return (

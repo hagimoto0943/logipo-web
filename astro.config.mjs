@@ -19,6 +19,20 @@ export default defineConfig({
     define: {
       global: 'globalThis',
     },
+    resolve: {
+      // extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
+      // alias: {
+      //   '@api': './src/lib/api',
+      //   '@components': './src/components',
+      //   '@hooks': './src/lib/hooks',
+      //   '@utils': './src/lib/utils',
+      //   '@styles': './src/styles',
+      //   '@images': './src/assets/images',
+      //   '@icons': './src/assets/icons',
+      //   '@lib': './src/lib',
+      //   '@providers': './src/lib/providers',
+      // },
+    },
     build: {
       rollupOptions: {
         output: {
