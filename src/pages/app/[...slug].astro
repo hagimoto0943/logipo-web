@@ -1,0 +1,14 @@
+---
+export async function getStaticPaths() {
+  return [
+    { params: { slug: undefined } },        // /app
+    { params: { slug: 'dashboard' } },      // /app/dashboard
+  ];
+}
+import Layout from "../../layouts/Layout.astro";
+import App from "../../react-app/main.jsx";
+---
+
+<Layout title="Logipop - アプリ" showHeader={false} showFooter={false}>
+  <App client:only="react" />
+</Layout>

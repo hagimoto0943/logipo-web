@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="料金 - Logipop">
+	<section class="py-20 px-4">
+		<div class="container mx-auto">
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">料金プラン</h1>
+				<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+					あなたの学習スタイルに合ったプランをお選びください。
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<div class="p-8 rounded-xl border bg-card text-card-foreground shadow">
+					<div class="text-center mb-8">
+						<h3 class="text-2xl font-bold mb-2">無料プラン</h3>
+						<div class="text-4xl font-bold mb-4">
+							¥0<span class="text-lg text-muted-foreground font-normal">/月</span>
+						</div>
+						<p class="text-muted-foreground">まずはお試しで始めたい方に</p>
+					</div>
+					
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							基礎問題 10問/日
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							基本的な進捗管理
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							メールサポート
+						</li>
+					</ul>
+					
+					<a 
+						href="/app" 
+						class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8"
+					>
+						今すぐ始める
+					</a>
+				</div>
+
+				<div class="p-8 rounded-xl border bg-card text-card-foreground shadow relative">
+					<div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+						人気
+					</div>
+					<div class="text-center mb-8">
+						<h3 class="text-2xl font-bold mb-2">スタンダード</h3>
+						<div class="text-4xl font-bold mb-4">
+							¥980<span class="text-lg text-muted-foreground font-normal">/月</span>
+						</div>
+						<p class="text-muted-foreground">本格的にスキルアップしたい方に</p>
+					</div>
+					
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							無制限の問題アクセス
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							詳細な進捗分析
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							弱点分析機能
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							チャットサポート
+						</li>
+					</ul>
+					
+					<a 
+						href="/app" 
+						class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 px-8"
+					>
+						プランを選択
+					</a>
+				</div>
+
+				<div class="p-8 rounded-xl border bg-card text-card-foreground shadow">
+					<div class="text-center mb-8">
+						<h3 class="text-2xl font-bold mb-2">プレミアム</h3>
+						<div class="text-4xl font-bold mb-4">
+							¥1,980<span class="text-lg text-muted-foreground font-normal">/月</span>
+						</div>
+						<p class="text-muted-foreground">最高のパフォーマンスを求める方に</p>
+					</div>
+					
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							全ての機能を利用可能
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							個別コーチング
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							カスタム問題作成
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							優先サポート
+						</li>
+					</ul>
+					
+					<a 
+						href="/app" 
+						class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8"
+					>
+						プランを選択
+					</a>
+				</div>
+			</div>
+
+			<div class="text-center mt-16">
+				<h2 class="text-3xl font-bold mb-6">よくある質問</h2>
+				<div class="max-w-3xl mx-auto space-y-6">
+					<div class="text-left p-6 rounded-lg bg-muted/30">
+						<h4 class="font-semibold mb-2">プランはいつでも変更できますか？</h4>
+						<p class="text-muted-foreground">はい、いつでも自由にプランを変更できます。上位プランへの変更は即座に適用され、下位プランへの変更は次の請求期間から適用されます。</p>
+					</div>
+					<div class="text-left p-6 rounded-lg bg-muted/30">
+						<h4 class="font-semibold mb-2">無料トライアルはありますか？</h4>
+						<p class="text-muted-foreground">スタンダードプランとプレミアムプランには14日間の無料トライアルがあります。期間中はいつでもキャンセル可能です。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

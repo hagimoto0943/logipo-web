@@ -1,0 +1,94 @@
+---
+interface Props {
+  title?: string;
+  showAuth?: boolean;
+}
+
+const { title = "Logipop", showAuth = true } = Astro.props;
+---
+
+<header class="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <a href="/" class="text-xl font-bold text-primary">
+        {title}
+      </a>
+    </div>
+    
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="/" class="text-sm font-medium hover:text-primary transition-colors">
+        ホーム
+      </a>
+      <a href="/features" class="text-sm font-medium hover:text-primary transition-colors">
+        機能
+      </a>
+      <a href="/pricing" class="text-sm font-medium hover:text-primary transition-colors">
+        料金
+      </a>
+      <a href="/about" class="text-sm font-medium hover:text-primary transition-colors">
+        会社概要
+      </a>
+    </nav>
+
+    {showAuth && (
+      <div class="flex items-center space-x-4">
+        <a 
+          href="/login" 
+          class="text-sm font-medium hover:text-primary transition-colors"
+        >
+          ログイン
+        </a>
+        <a 
+          href="/app" 
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
+        >
+          アプリを開く
+        </a>
+      </div>
+    )}
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden p-2" id="mobile-menu-button">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden hidden border-t" id="mobile-menu">
+    <div class="container mx-auto px-4 py-4 space-y-2">
+      <a href="/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">
+        ホーム
+      </a>
+      <a href="/features" class="block py-2 text-sm font-medium hover:text-primary transition-colors">
+        機能
+      </a>
+      <a href="/pricing" class="block py-2 text-sm font-medium hover:text-primary transition-colors">
+        料金
+      </a>
+      <a href="/about" class="block py-2 text-sm font-medium hover:text-primary transition-colors">
+        会社概要
+      </a>
+      {showAuth && (
+        <div class="pt-4 border-t space-y-2">
+          <a href="/login" class="block py-2 text-sm font-medium hover:text-primary transition-colors">
+            ログイン
+          </a>
+          <a href="/app" class="block py-2 text-sm font-medium text-primary">
+            アプリを開く
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</header>
+
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

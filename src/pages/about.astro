@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="会社概要 - Logipop">
+	<section class="py-20 px-4">
+		<div class="container mx-auto">
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">会社概要</h1>
+				<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+					論理的思考力の向上を通じて、より良い未来の創造を支援します。
+				</p>
+			</div>
+
+			<div class="max-w-4xl mx-auto">
+				<div class="grid md:grid-cols-2 gap-12 mb-16">
+					<div>
+						<h2 class="text-3xl font-bold mb-6">私たちのミッション</h2>
+						<p class="text-muted-foreground mb-4">
+							現代社会では、情報の氾濫や複雑な問題に対して適切な判断を下すことが求められています。
+							私たちは論理的思考力の向上を通じて、個人と組織の問題解決能力を高めることで、
+							より良い社会の実現に貢献します。
+						</p>
+						<p class="text-muted-foreground">
+							誰もが論理的に考え、適切な判断を下せるようになることで、
+							個人の成長と社会全体の発展を支援します。
+						</p>
+					</div>
+					<div class="bg-muted/30 rounded-lg p-8">
+						<h3 class="text-xl font-semibold mb-4">企業情報</h3>
+						<dl class="space-y-3">
+							<div>
+								<dt class="text-sm text-muted-foreground">会社名</dt>
+								<dd class="font-medium">株式会社Logipop</dd>
+							</div>
+							<div>
+								<dt class="text-sm text-muted-foreground">設立</dt>
+								<dd class="font-medium">2024年</dd>
+							</div>
+							<div>
+								<dt class="text-sm text-muted-foreground">所在地</dt>
+								<dd class="font-medium">東京都渋谷区</dd>
+							</div>
+							<div>
+								<dt class="text-sm text-muted-foreground">事業内容</dt>
+								<dd class="font-medium">教育プラットフォームの開発・運営</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+
+				<div class="mb-16">
+					<h2 class="text-3xl font-bold text-center mb-12">私たちの価値観</h2>
+					<div class="grid md:grid-cols-3 gap-8">
+						<div class="text-center p-6">
+							<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+								</svg>
+							</div>
+							<h3 class="text-xl font-semibold mb-3">論理性</h3>
+							<p class="text-muted-foreground">
+								データに基づいた客観的な判断と、
+								論理的な思考プロセスを重視します。
+							</p>
+						</div>
+
+						<div class="text-center p-6">
+							<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+								</svg>
+							</div>
+							<h3 class="text-xl font-semibold mb-3">共創</h3>
+							<p class="text-muted-foreground">
+								ユーザーとともに学び、成長し、
+								より良いサービスを創り上げていきます。
+							</p>
+						</div>
+
+						<div class="text-center p-6">
+							<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+								</svg>
+							</div>
+							<h3 class="text-xl font-semibold mb-3">革新</h3>
+							<p class="text-muted-foreground">
+								常に新しい技術と手法を探求し、
+								教育の可能性を広げ続けます。
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center bg-muted/30 rounded-lg p-12">
+					<h2 class="text-3xl font-bold mb-6">一緒に未来を創りませんか？</h2>
+					<p class="text-muted-foreground mb-8 max-w-2xl mx-auto">
+						論理的思考力を身につけて、より良い判断と意思決定ができるようになりましょう。
+						私たちがサポートします。
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a 
+							href="/app" 
+							class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 px-8"
+						>
+							今すぐ始める
+						</a>
+						<a 
+							href="/contact" 
+							class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8"
+						>
+							お問い合わせ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
