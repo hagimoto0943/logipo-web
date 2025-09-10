@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Button } from "../../components/ui/button.jsx";
+import { Button } from "@components/ui/button.jsx";
 
 export default function Root() {
   const location = useLocation();
