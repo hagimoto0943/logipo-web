@@ -49,7 +49,11 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## Deploy
 
 - build 
-```yarn run build```
+```sh
+yarn run build
+```
 
 - deploy for cloudflare pages
-```npx wrangler login && npx wrangler pages deploy dist```
+```sh 
+npx wrangler login && npx wrangler pages deploy dist
+```
