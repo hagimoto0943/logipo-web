@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Button } from "@components/ui/button.jsx";
+import { Button } from "@components/ui/button";
 
 export default function Root() {
   const location = useLocation();
@@ -30,6 +30,14 @@ export default function Root() {
               }`}
             >
               ダッシュボード
+            </Link>
+            <Link 
+              to="/app/test" 
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === '/app/test' ? 'text-primary' : 'text-muted-foreground'
+              }`}
+            >
+              テストコンポーネント
             </Link>
           </nav>
 

@@ -8,6 +8,7 @@ import {
 import Root from "./routes/root";
 import Training from "./routes/training";
 import Dashboard from "./routes/dashboard";
+import Test from "./routes/test";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Training /> },
       { path: "dashboard", element: <Dashboard /> },
+      { path: "test", element: <Test /> },
+
     ],
   },
 ]);
