@@ -1,10 +1,8 @@
 import React from "react";
 import { SessionProvider } from "@lib/providers/SessionProvider.jsx";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { SidebarProvider, SidebarTrigger } from "@components/ui/sidebar";
+import { AppSidebar } from '@components/app/Sidebar'  
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Training from "./routes/training";
 import Dashboard from "./routes/dashboard";
@@ -18,7 +16,6 @@ const router = createBrowserRouter([
       { index: true, element: <Training /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: "test", element: <Test /> },
-
     ],
   },
 ]);
@@ -26,7 +23,11 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <SessionProvider>
-      <RouterProvider router={router} />
+      <SidebarProvider>
+        <AppSidebar />
+          <SidebarTrigger />
+          <RouterProvider router={router} />
+      </SidebarProvider>
     </SessionProvider>
   );
 }

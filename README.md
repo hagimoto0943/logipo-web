@@ -46,6 +46,22 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 
+## Setup
+- install package
+```sh
+yarn install
+```
+
+- build env
+```sh
+yarn run dev
+```
+
+- import shadcn components
+```sh
+npx shadcn@latest add button
+```
+
 ## Deploy
 
 - build 
@@ -57,3 +73,5 @@ yarn run build
 ```sh 
 npx wrangler login && npx wrangler pages deploy dist
 ```
+
+
