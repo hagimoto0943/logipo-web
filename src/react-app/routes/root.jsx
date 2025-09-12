@@ -1,52 +1,43 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
-import { Button } from "@components/ui/button.jsx";
+import { Outlet, useLocation } from "react-router-dom";
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@components/ui/sidebar"
+import { AppSidebar } from '@components/app/Sidebar'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@components/ui/breadcrumb'
+import { Separator } from "@components/ui/separator";
+
 
 export default function Root() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link to="/app" className="text-xl font-bold text-primary">
-              Logipop
-            </Link>
-          </div>
-          
-          <nav className="flex items-center space-x-6">
-            <Link 
-              to="/app" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === '/app' ? 'text-primary' : 'text-muted-foreground'
-              }`}
-            >
-              トレーニング
-            </Link>
-            <Link 
-              to="/app/dashboard" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === '/app/dashboard' ? 'text-primary' : 'text-muted-foreground'
-              }`}
-            >
-              ダッシュボード
-            </Link>
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              設定
-            </Button>
-            <Button variant="ghost" size="sm">
-              ログアウト
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      <main className="flex-1">
-        <Outlet />
-      </main>
-    </div>
+    <main>
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+            <div className="flex items-center gap-2 px-4">
+              <SidebarTrigger className="-ml-1" />
+              <Separator
+                orientation="vertical"
+                className="mr-2 data-[orientation=vertical]:h-4"
+              />
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem className="hidden md:block">
+                    <BreadcrumbLink href="#">
+                      Home
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="hidden md:block" />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
+          </header>
+          <Outlet />
+        </SidebarInset>
+      </SidebarProvider>
+    </main>
   );
 }

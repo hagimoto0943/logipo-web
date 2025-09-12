@@ -1,13 +1,11 @@
 import React from "react";
 import { SessionProvider } from "@lib/providers/SessionProvider.jsx";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Training from "./routes/training";
 import Dashboard from "./routes/dashboard";
+import Test from "./routes/test";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +13,9 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { index: true, element: <Training /> },
+      { path: "training", element: <Training /> },
       { path: "dashboard", element: <Dashboard /> },
+      { path: "test", element: <Test /> },
     ],
   },
 ]);

@@ -6,8 +6,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  // output: 'static', // デフォルト（SSG）
-  // adapter: cloudflare(),
+  adapter: cloudflare(),
   
   integrations: [react(), tailwind()],
   
@@ -32,11 +31,17 @@ export default defineConfig({
       //   '@lib': './src/lib',
       //   '@providers': './src/lib/providers',
       // },
+      alias: {
+        'react-dom/server': 'react-dom/server.edge',
+      },
+    },
+    optimizeDeps: {
+      exclude: ['react-dom/server.browser'], 
     },
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[name].[hash][extname]'
+          assetFileNames: '_assets/[name].[hash][extname]'
         }
       }
     }
