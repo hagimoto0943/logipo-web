@@ -6,8 +6,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  // output: 'static', // デフォルト（SSG）
-  // adapter: cloudflare(),
+  adapter: cloudflare(),
   
   integrations: [react(), tailwind()],
   
