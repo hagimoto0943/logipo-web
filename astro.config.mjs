@@ -31,13 +31,13 @@ export default defineConfig({
       //   '@lib': './src/lib',
       //   '@providers': './src/lib/providers',
       // },
-      alias: {
-        'react-dom/server': 'react-dom/server.edge',
-      },
+      // alias: {
+      //   'react-dom/server': 'react-dom/server.edge',
+      // },
     },
-    optimizeDeps: {
-      exclude: ['react-dom/server.browser'], 
-    },
+    // optimizeDeps: {
+    //   exclude: ['react-dom/server.browser'], 
+    // },
     build: {
       rollupOptions: {
         output: {
