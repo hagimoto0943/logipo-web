@@ -18,7 +18,7 @@ export default function Root() {
             <Link 
               to="/app" 
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === '/app' ? 'text-primary' : 'text-muted-foreground'
+                location.pathname === '/app/training' ? 'text-primary' : 'text-muted-foreground'
               }`}
             >
               トレーニング

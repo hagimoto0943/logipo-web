@@ -5,7 +5,7 @@ import { NavProjects } from "@components/ui/nav-projects"
 import { NavUser } from "@components/ui/nav-user"
 import { TeamSwitcher } from "@components/ui/team-switcher"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@components/ui/sidebar"
-import { ReviewApi } from "@lib/api/base/review.js"
+import ReviewApi from "@lib/api/base/review.js"
 
 // This is sample data.
 const data = {
@@ -129,6 +129,21 @@ const data = {
       name: "Travel",
       url: "#",
       icon: Map,
+    },
+    {
+      name: 'Dashboard',
+      url: '/app/dashboard',
+      icon: Frame,
+    },
+    {
+      name: 'Training',
+      url: '/app/training',
+      icon: Bot,
+    },
+    {
+      name: 'Component Testing',
+      url: '/app/test',
+      icon: Settings2,
     },
   ],
 }
